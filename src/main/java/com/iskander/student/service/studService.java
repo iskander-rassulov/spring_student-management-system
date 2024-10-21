@@ -2,15 +2,16 @@ package com.iskander.student.service;
 
 import java.util.List;
 
+import com.iskander.student.domain.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.iskander.student.domain;
+import repository.studRepository;
 
 @Service
 public class studService {
 
     @Autowired
-    private StudentRepository repo;
+    private studRepository repo;
 
     public List<Student> listAll() {
         return repo.findAll();
